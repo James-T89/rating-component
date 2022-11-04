@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --Light-Orange: hsl(25, 97%, 65%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 66%);
+  --Medium-Grey: hsl(217, 12%, 71%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Card-Black: hsla(213, 20%, 18%, 0.37);
+  --Card-Grey: hsl(214, 15%, 25%);
+  font-size: 6.25%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--Very-Dark-Blue);
+  font-size: 15rem;
+  padding: 20rem;
+}
+
+.card {
+  background: linear-gradient(0deg, var(--Card-Black) 25%, var(--Dark-Blue));
+  padding: 27rem 25rem;
+  min-width: 335rem;
+  max-width: 364rem;
+  margin-block-end: 10rem;
+  border-radius: 10px;
+}
+
+.svg-wrapper {
+  position: relative;
+  background-color: var(--Card-Grey);
+  max-width: 35rem;
+  min-height: 35rem;
+  border-radius: 50%;
+}
+
+.star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+h1 {
+  margin-block-start: 20rem;
+  font-size: 24.5rem;
+  color: var(--White);
+}
+
+p {
+  margin: 15rem 0 25rem 0;
+  font-size: 14.5rem;
+  line-height: 1.5;
+  color: var(--Medium-Grey);
+}
+
+.thank-you-state {
+  display: none;
+  text-align: center;
+}
+
+.final-rating {
+  display: block;
+  max-width: 180rem;
+  margin: 20rem auto 0 auto;
+  border-radius: 15rem;
+  padding: 6rem 0 4rem 0;
+  color: var(--Light-Orange);
+  background-color: var(--Card-Grey);
+}
+
+.thank-you-state > h1 {
+  margin-block-start: 30rem;
+}
+
+.thank-you-state > p {
+  margin: 15rem 0;
+}
+
+.rating-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15rem;
+}
+
+.rating-number {
+  border: none;
+  border-radius: 50%;
+  max-width: 40rem;
+  min-height: 40rem;
+  background-color: var(--Card-Grey);
+  color: var(--Medium-Grey);
+}
+
+.rating-number:hover {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+  transition: 200ms;
+  cursor: pointer;
+  outline: none;
+}
+
+.rating-number:focus {
+  background-color: var(--Orange);
+  color: var(--White);
+  cursor: pointer;
+  outline: none;
+}
+
+.submit {
+  width: 100%;
+  margin-block-start: 25rem;
+  background-color: var(--Orange);
+  border-radius: 20px;
+  padding: 13rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  border: none;
+  font-weight: 700;
+  color: var(--White);
+}
+
+.submit:hover,
+.submit:focus {     
+  background-color: var(--White);
+  color: var(--Orange);
+  transition: 200ms;
+  cursor: pointer;
+  outline: none;
+}
+
