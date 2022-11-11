@@ -66,6 +66,51 @@ p {
   color: var(--Medium-Grey);
 }
 
+fieldset {
+  border: none;
+}
+
+.rating-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15rem;
+}
+
+.rating-grid input[type="radio"] {
+  display: none;
+} 
+
+.rating-grid label {
+  display: inline-block;
+  max-width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background-color: var(--Card-Grey);
+  color: var(--Medium-Grey);
+  cursor: pointer;
+  position: relative;
+}
+
+label span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rating-grid label:hover {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+  transition: 200ms;
+  cursor: pointer;
+  outline: none;
+}
+
+.rating-grid input[type="radio"]:checked+label {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+
 .thank-you-state {
   display: none;
   text-align: center;
@@ -89,35 +134,13 @@ p {
   margin: 15rem 0;
 }
 
-.rating-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15rem;
-}
 
-.rating-number {
-  border: none;
-  border-radius: 50%;
-  max-width: 40rem;
-  min-height: 40rem;
-  background-color: var(--Card-Grey);
-  color: var(--Medium-Grey);
-}
-
-.rating-number:hover {
-  background-color: var(--Light-Grey);
-  color: var(--White);
-  transition: 200ms;
-  cursor: pointer;
-  outline: none;
-}
-
-.rating-number:focus {
+.rating-label:focus {
   background-color: var(--Orange);
   color: var(--White);
   cursor: pointer;
   outline: none;
-}
+} 
 
 .submit {
   width: 100%;
