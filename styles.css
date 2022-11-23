@@ -98,7 +98,8 @@ label span {
   transform: translate(-50%, -50%);
 }
 
-.rating-grid label:hover {
+.rating-grid label:hover,
+.rating-grid label:focus {
   background-color: var(--Light-Grey);
   color: var(--White);
   transition: 200ms;
@@ -133,14 +134,6 @@ label span {
 .thank-you-state > p {
   margin: 15rem 0;
 }
-
-
-.rating-label:focus {
-  background-color: var(--Orange);
-  color: var(--White);
-  cursor: pointer;
-  outline: none;
-} 
 
 .submit {
   width: 100%;

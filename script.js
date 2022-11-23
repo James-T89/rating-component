@@ -11,3 +11,9 @@ rating.forEach((score) =>
     });
   })
 );
+
+document.onkeydown = (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    document.activeElement.click();
+  }
+};
