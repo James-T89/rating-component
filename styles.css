@@ -32,7 +32,6 @@ body {
 .card {
   background: linear-gradient(0deg, var(--Card-Black) 25%, var(--Dark-Blue));
   padding: 27rem 25rem;
-  min-width: 335rem;
   max-width: 364rem;
   margin-block-end: 10rem;
   border-radius: 10px;
@@ -81,22 +80,16 @@ fieldset {
 } 
 
 .rating-grid label {
-  display: inline-block;
-  max-width: 40rem;
-  height: 40rem;
+  display: grid;
+  width: 80%;
+  aspect-ratio: 1;
+  place-content: center;
   border-radius: 50%;
   background-color: var(--Card-Grey);
   color: var(--Medium-Grey);
   cursor: pointer;
-  position: relative;
 }
 
-label span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 .rating-grid label:hover,
 .rating-grid label:focus {
@@ -113,7 +106,6 @@ label span {
 }
 
 .thank-you-state {
-  display: none;
   text-align: center;
 }
 

@@ -6,8 +6,8 @@ rating.forEach((score) =>
   score.addEventListener("click", () => {
     finalScore.innerHTML = `${score.value}`;
     submitBtn.addEventListener("click", () => {
-      document.querySelector(".rating-state").style.display = "none";
-      document.querySelector(".thank-you-state").style.display = "block";
+      document.querySelector(".rating-state").hidden = true;
+      document.querySelector(".thank-you-state").hidden = false;
     });
   })
 );
@@ -17,3 +17,7 @@ document.onkeydown = (e) => {
     document.activeElement.click();
   }
 };
+
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+});
